@@ -95,10 +95,10 @@ namespace DAL
 
         public static bool Update_offre(int a, string b, string c, DateTime d, DateTime e, DateTime f, DateTime g, int h, string i, int j, string k, string l)
         {
-            string requete = String.Format("update offre set  depart='{0}', arrivee={1}," +
+            string requete = String.Format("update offre set  depart='{0}', arrivee='{1}'," +
                 " date_aller='{2}', heure_aller ='{3}',date_retour ='{4}', " +
-                " heure_retour ='{5}',nbre_places_dispo = '{6}', etapes ='{7}', prix_par_passager='{8}',"+
-                ",gamme_vehicule = '{9}', precision_supplementaire ='{10}', where id_offre={11};", b,c,d,e,f,g,h,i,j,k,l,a);
+                " heure_retour ='{5}', nbre_places_dispo = {6}, etapes ='{7}', prix_par_passager={8},"+
+                "gamme_vehicule = '{9}', precision_supplementaire ='{10}' where id_offre={11};", b,c,d,e,f,g,h,i,j,k,l,a);
             return utils.miseajour(requete);
         }
 

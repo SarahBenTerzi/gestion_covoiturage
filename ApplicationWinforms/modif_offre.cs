@@ -60,7 +60,7 @@ namespace ApplicationWinforms
         {
             try
             {
-                offreDAO.Update_offre(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text, Convert.ToDateTime(dateTimePicker1.Value), Convert.ToDateTime(dateTimePicker3.Value), Convert.ToDateTime(dateTimePicker2.Value), Convert.ToDateTime(dateTimePicker4.Value), int.Parse(textBox4.Text), textBox5.Text, int.Parse(textBox7.Text), comboBox1.Text, comboBox2.Text);
+                offreDAO.Update_offre(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToDateTime(dateTimePicker3.Text), Convert.ToDateTime(dateTimePicker2.Text), Convert.ToDateTime(dateTimePicker4.Text), int.Parse(textBox4.Text), textBox5.Text, int.Parse(textBox7.Text), comboBox1.Text, comboBox2.Text);
                 MessageBox.Show("L'offre est bien modifiée");
             }
             catch(Exception ex)
