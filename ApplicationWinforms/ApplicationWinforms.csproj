@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{301D7889-84BE-47EE-8CB0-7F19B1421598}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ApplicationWinforms</RootNamespace>
+    <AssemblyName>ApplicationWinforms</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accueil.Designer.cs">
+      <DependentUpon>accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="afficher_coord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="afficher_coord.Designer.cs">
+      <DependentUpon>afficher_coord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ajout_offre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajout_offre.Designer.cs">
+      <DependentUpon>ajout_offre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authentification.Designer.cs">
+      <DependentUpon>authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="authen_consult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="authen_consult.Designer.cs">
+      <DependentUpon>authen_consult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conducteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conducteur.Designer.cs">
+      <DependentUpon>conducteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fjy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fjy.Designer.cs">
+      <DependentUpon>fjy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gerer_compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerer_compte.Designer.cs">
+      <DependentUpon>gerer_compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gerer_offre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerer_offre.Designer.cs">
+      <DependentUpon>gerer_offre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gerer_reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gerer_reservation.Designer.cs">
+      <DependentUpon>gerer_reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modif_compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modif_compte.Designer.cs">
+      <DependentUpon>modif_compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modif_offre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modif_offre.Designer.cs">
+      <DependentUpon>modif_offre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="passager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="passager.Designer.cs">
+      <DependentUpon>passager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="se connecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="se connecter.Designer.cs">
+      <DependentUpon>se connecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supp_compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supp_compte.Designer.cs">
+      <DependentUpon>supp_compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supp_offre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supp_offre.Designer.cs">
+      <DependentUpon>supp_offre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utilisateurs_offres_reservationsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>utilisateurs_offres_reservationsDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="accueil.resx">
+      <DependentUpon>accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="afficher_coord.resx">
+      <DependentUpon>afficher_coord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajout_offre.resx">
+      <DependentUpon>ajout_offre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authentification.resx">
+      <DependentUpon>authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="authen_consult.resx">
+      <DependentUpon>authen_consult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conducteur.resx">
+      <DependentUpon>conducteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fjy.resx">
+      <DependentUpon>fjy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gerer_compte.resx">
+      <DependentUpon>gerer_compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gerer_offre.resx">
+      <DependentUpon>gerer_offre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modif_compte.resx">
+      <DependentUpon>modif_compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modif_offre.resx">
+      <DependentUpon>modif_offre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="passager.resx">
+      <DependentUpon>passager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="se connecter.resx">
+      <DependentUpon>se connecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supp_compte.resx">
+      <DependentUpon>supp_compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supp_offre.resx">
+      <DependentUpon>supp_offre.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="utilisateurs_offres_reservationsDataSet.xsc">
+      <DependentUpon>utilisateurs_offres_reservationsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="utilisateurs_offres_reservationsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>utilisateurs_offres_reservationsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="utilisateurs_offres_reservationsDataSet.xss">
+      <DependentUpon>utilisateurs_offres_reservationsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BEL\BEL.csproj">
+      <Project>{264bc4ab-18c7-4447-b501-be8f459cdf99}</Project>
+      <Name>BEL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{1ca36bef-33b5-4c82-8e03-a40abe53c39e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="utilisateurs_offres_reservations.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
