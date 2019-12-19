@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace ApplicationWinforms
 {
-    public partial class gerer_reservation : Form
+    public partial class recherche_id : Form
     {
-        public gerer_reservation()
+        public recherche_id()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            recherche_id FR = new recherche_id();
-            FR.ShowDialog();
+            this.Close();
         }
     }
 }

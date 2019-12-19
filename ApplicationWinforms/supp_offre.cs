@@ -24,10 +24,16 @@ namespace ApplicationWinforms
             {
                 offreDAO.Delete_offre(int.Parse(textBox1.Text));
                 MessageBox.Show("offre supprimée");
+                this.Close();
 
             }
             else
                 MessageBox.Show("l'offre n'est pas le votre à supprimer");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

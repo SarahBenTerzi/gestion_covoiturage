@@ -29,7 +29,7 @@ namespace ApplicationWinforms
                 textBox3.Text = ofr.arrivee;
                 textBox4.Text = Convert.ToString(ofr.nbre_places_dispo);
                 textBox5.Text = ofr.etapes;
-                textBox7.Text = ofr.depart;
+                textBox7.Text = Convert.ToString(ofr.prix_par_passager);
                 comboBox2.Text = ofr.prcision_supplementaire;
                 comboBox1.Text = ofr.gamme_vehicule;
                 dateTimePicker1.Value = ofr.date_aller;
