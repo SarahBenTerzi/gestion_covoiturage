@@ -38,10 +38,14 @@ namespace ApplicationWinforms
                 offre ofr2 = offreDAO.get_offre_depart(textBox1.Text);
                 offre ofr3 = offreDAO.get_offre_arrivee(textBox2.Text);
                 List<offre> L3 = new List<offre>();
-                L3.Add(ofr);
-                L3.Add(ofr1);
-                L3.Add(ofr2);
-                L3.Add(ofr3);
+                if (offreDAO.verif_offre(ofr.id_offre))
+                    { L3.Add(ofr); }
+                if (offreDAO.verif_offre(ofr1.id_offre))
+                    L3.Add(ofr1);
+                if (offreDAO.verif_offre(ofr2.id_offre))
+                    L3.Add(ofr2);
+                if (offreDAO.verif_offre(ofr3.id_offre))
+                    L3.Add(ofr3);
                 dataGridView1.DataSource = L3;
             }
             catch(Exception ex)
@@ -57,6 +61,17 @@ namespace ApplicationWinforms
             // TODO: This line of code loads data into the 'utilisateurs_offres_reservationsDataSet.offre' table. You can move, or remove it, as needed.
             //this.offreTableAdapter.Fill(this.utilisateurs_offres_reservationsDataSet.offre);
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            faire_reservation FR = new faire_reservation();
+            FR.ShowDialog();
         }
     }
 }

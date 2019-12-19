@@ -46,6 +46,8 @@
             this.offreTableAdapter = new ApplicationWinforms.utilisateurs_offres_reservationsDataSetTableAdapters.offreTableAdapter();
             this.utilisateurBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.utilisateurTableAdapter = new ApplicationWinforms.utilisateurs_offres_reservationsDataSetTableAdapters.utilisateurTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurs_offres_reservationsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offreBindingSource)).BeginInit();
@@ -191,12 +193,40 @@
             // 
             this.utilisateurTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(703, 322);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 30);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "&Faire une reservation";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(596, 322);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 30);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "&Annuler";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // gerer_reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(888, 415);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -237,5 +267,7 @@
         private utilisateurs_offres_reservationsDataSetTableAdapters.offreTableAdapter offreTableAdapter;
         private System.Windows.Forms.BindingSource utilisateurBindingSource;
         private utilisateurs_offres_reservationsDataSetTableAdapters.utilisateurTableAdapter utilisateurTableAdapter;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

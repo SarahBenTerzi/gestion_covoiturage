@@ -14,7 +14,7 @@ namespace DAL
         {
             string requete = String.Format("select * from offre where id_offre ={0};", id);
             OleDbDataReader rd = utils.lire(requete);
-            int X=-5;
+            int X=0;
             
             while (rd.Read())
             {
@@ -23,7 +23,7 @@ namespace DAL
                
             }
             utils.Disconnect();
-            if (X == -5)
+            if (X == 0)
                 return false;
             else
                 return true;
@@ -133,7 +133,7 @@ namespace DAL
 
         public static offre get_offre_depart (string ch)
         {
-            string requete = String.Format("select * from offre where depart ={0};", ch);
+            string requete = String.Format("select * from offre where depart = '{0}';", ch);
             OleDbDataReader rd = utils.lire(requete);
             offre u = new offre();
             while (rd.Read())
@@ -161,7 +161,7 @@ namespace DAL
 
         public static offre get_offre_arrivee (string ch)
         {
-            string requete = String.Format("select * from offre where arrivee ={0};", ch);
+            string requete = String.Format("select * from offre where arrivee ='{0}';", ch);
             OleDbDataReader rd = utils.lire(requete);
             offre u = new offre();
             while (rd.Read())

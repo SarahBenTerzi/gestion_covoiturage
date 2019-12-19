@@ -82,6 +82,12 @@
     <Compile Include="conducteur.Designer.cs">
       <DependentUpon>conducteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="faire_reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faire_reservation.Designer.cs">
+      <DependentUpon>faire_reservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="fjy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="conducteur.resx">
       <DependentUpon>conducteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faire_reservation.resx">
+      <DependentUpon>faire_reservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fjy.resx">
       <DependentUpon>fjy.cs</DependentUpon>
