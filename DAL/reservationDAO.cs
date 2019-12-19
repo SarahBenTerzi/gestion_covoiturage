@@ -12,8 +12,8 @@ namespace DAL
     {
         public static bool ajout_reservation (int a, int b, int c)
         {
-            string requete = String.Format("insert into reservation " +
-                " values ('{0}','{1}','{2}');", a,b,c);
+            string requete = String.Format("insert into reservation (id_reservation , id_offre, id_passager) " +
+                " values ({0},{1},{2});", a,b,c);
             return utils.miseajour(requete);
         }
 
