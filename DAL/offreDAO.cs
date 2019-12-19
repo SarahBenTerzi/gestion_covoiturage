@@ -14,7 +14,7 @@ namespace DAL
         {
             string requete = String.Format("select * from offre where id_offre ={0};", id);
             OleDbDataReader rd = utils.lire(requete);
-            int X=0;
+            int X=-5;
             
             while (rd.Read())
             {
@@ -23,7 +23,7 @@ namespace DAL
                
             }
             utils.Disconnect();
-            if (X == 0)
+            if (X == -5)
                 return false;
             else
                 return true;
@@ -62,6 +62,7 @@ namespace DAL
             offre u = new offre();
             while (rd.Read())
             {
+                u.id_offre = rd.GetInt32(0);
                 u.depart = rd.GetString(1);
                 u.arrivee = rd.GetString(2);
                 u.date_aller= rd.GetDateTime(3);
@@ -73,8 +74,7 @@ namespace DAL
                 u.prix_par_passager= rd.GetInt32(9);
                 u.gamme_vehicule = rd.GetString(10);
                 u.prcision_supplementaire = rd.GetString(11);
-                u.cin_conducteur = rd.GetInt32(12
-);
+                u.cin_conducteur = rd.GetInt32(12);
 
 
             }

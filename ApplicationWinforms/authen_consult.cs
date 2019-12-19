@@ -19,9 +19,9 @@ namespace ApplicationWinforms
             InitializeComponent();
 
             utilisateur utl = utilisateurDAO.Get_utilisateur(int.Parse(authentification.test1));
-            List<utilisateur> L2 = new List<utilisateur>();
-            L2.Add(utl);
-            dataGridView1.DataSource = L2;
+            List<utilisateur> L3 = new List<utilisateur>();
+            L3.Add(utl);
+            dataGridView1.DataSource = L3;
 
         }
 
@@ -32,18 +32,27 @@ namespace ApplicationWinforms
 
         private void authen_consult_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'utilisateurs_offres_reservationsDataSet.utilisateur' table. You can move, or remove it, as needed.
+            this.utilisateurTableAdapter.Fill(this.utilisateurs_offres_reservationsDataSet.utilisateur);
+            // TODO: This line of code loads data into the 'db_clientsDataSet.offre' table. You can move, or remove it, as needed.
+            //this.offreTableAdapter.Fill(this.db_clientsDataSet.offre);
             // TODO: This line of code loads data into the 'db_clientsDataSet.utilisateur' table. You can move, or remove it, as needed.
-            this.utilisateurTableAdapter.Fill(this.db_clientsDataSet.utilisateur);
+            this.utilisateurTableAdapter.Fill(this.utilisateurs_offres_reservationsDataSet.utilisateur);
 
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             //gerer_compte FR = new gerer_compte();
             //FR.ShowDialog();
             this.Close();
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
