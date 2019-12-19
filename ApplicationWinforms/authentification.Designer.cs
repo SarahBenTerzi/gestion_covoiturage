@@ -36,22 +36,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cinComboBox = new System.Windows.Forms.ComboBox();
-            this.db_clientsDataSet = new ApplicationWinforms.utilisateurs_offres_reservationsDataSet();
-            this.utilisateurBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.utilisateurTableAdapter = new ApplicationWinforms.utilisateurs_offres_reservationsDataSetTableAdapters.utilisateurTableAdapter();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.utilisateuroffreBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.offreTableAdapter = new ApplicationWinforms.utilisateurs_offres_reservationsDataSetTableAdapters.offreTableAdapter();
             this.utilisateuroffreBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.offrereservationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reservationTableAdapter = new ApplicationWinforms.utilisateurs_offres_reservationsDataSetTableAdapters.reservationTableAdapter();
+            this.utilisateurs_offres_reservationsDataSet = new ApplicationWinforms.utilisateurs_offres_reservationsDataSet();
+            this.utilisateurBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.utilisateurTableAdapter = new ApplicationWinforms.utilisateurs_offres_reservationsDataSetTableAdapters.utilisateurTableAdapter();
+            this.utilisateurBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             mDPLabel = new System.Windows.Forms.Label();
             cINLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.db_clientsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.utilisateuroffreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateuroffreBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.offrereservationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilisateurs_offres_reservationsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mDPLabel
@@ -108,25 +107,14 @@
             // 
             // cinComboBox
             // 
+            this.cinComboBox.DataSource = this.utilisateurBindingSource1;
+            this.cinComboBox.DisplayMember = "CIN";
             this.cinComboBox.FormattingEnabled = true;
             this.cinComboBox.Location = new System.Drawing.Point(130, 94);
             this.cinComboBox.Name = "cinComboBox";
             this.cinComboBox.Size = new System.Drawing.Size(151, 21);
             this.cinComboBox.TabIndex = 7;
-            // 
-            // db_clientsDataSet
-            // 
-            this.db_clientsDataSet.DataSetName = "db_clientsDataSet";
-            this.db_clientsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // utilisateurBindingSource
-            // 
-            this.utilisateurBindingSource.DataMember = "utilisateur";
-            this.utilisateurBindingSource.DataSource = this.db_clientsDataSet;
-            // 
-            // utilisateurTableAdapter
-            // 
-            this.utilisateurTableAdapter.ClearBeforeFill = true;
+            this.cinComboBox.ValueMember = "CIN";
             // 
             // checkBox1
             // 
@@ -139,28 +127,32 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // utilisateuroffreBindingSource
-            // 
-            this.utilisateuroffreBindingSource.DataMember = "utilisateuroffre";
-            this.utilisateuroffreBindingSource.DataSource = this.utilisateurBindingSource;
-            // 
-            // offreTableAdapter
-            // 
-            this.offreTableAdapter.ClearBeforeFill = true;
-            // 
-            // utilisateuroffreBindingSource1
-            // 
-            this.utilisateuroffreBindingSource1.DataMember = "utilisateuroffre";
-            this.utilisateuroffreBindingSource1.DataSource = this.utilisateurBindingSource;
-            // 
             // offrereservationBindingSource
             // 
-            this.offrereservationBindingSource.DataMember = "offrereservation";
             this.offrereservationBindingSource.DataSource = this.utilisateuroffreBindingSource1;
             // 
             // reservationTableAdapter
             // 
             this.reservationTableAdapter.ClearBeforeFill = true;
+            // 
+            // utilisateurs_offres_reservationsDataSet
+            // 
+            this.utilisateurs_offres_reservationsDataSet.DataSetName = "utilisateurs_offres_reservationsDataSet";
+            this.utilisateurs_offres_reservationsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // utilisateurBindingSource
+            // 
+            this.utilisateurBindingSource.DataMember = "utilisateur";
+            this.utilisateurBindingSource.DataSource = this.utilisateurs_offres_reservationsDataSet;
+            // 
+            // utilisateurTableAdapter
+            // 
+            this.utilisateurTableAdapter.ClearBeforeFill = true;
+            // 
+            // utilisateurBindingSource1
+            // 
+            this.utilisateurBindingSource1.DataMember = "utilisateur";
+            this.utilisateurBindingSource1.DataSource = this.utilisateurs_offres_reservationsDataSet;
             // 
             // authentification
             // 
@@ -179,11 +171,11 @@
             this.Name = "authentification";
             this.Text = "authentification";
             this.Load += new System.EventHandler(this.authentification_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.db_clientsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.utilisateuroffreBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateuroffreBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.offrereservationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilisateurs_offres_reservationsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,14 +186,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cinComboBox;
-        private utilisateurs_offres_reservationsDataSet db_clientsDataSet;
-        private System.Windows.Forms.BindingSource utilisateurBindingSource;
-        private utilisateurs_offres_reservationsDataSetTableAdapters.utilisateurTableAdapter utilisateurTableAdapter;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.BindingSource utilisateuroffreBindingSource;
-        private utilisateurs_offres_reservationsDataSetTableAdapters.offreTableAdapter offreTableAdapter;
         private System.Windows.Forms.BindingSource utilisateuroffreBindingSource1;
         private System.Windows.Forms.BindingSource offrereservationBindingSource;
         private utilisateurs_offres_reservationsDataSetTableAdapters.reservationTableAdapter reservationTableAdapter;
+        private utilisateurs_offres_reservationsDataSet utilisateurs_offres_reservationsDataSet;
+        private System.Windows.Forms.BindingSource utilisateurBindingSource;
+        private utilisateurs_offres_reservationsDataSetTableAdapters.utilisateurTableAdapter utilisateurTableAdapter;
+        private System.Windows.Forms.BindingSource utilisateurBindingSource1;
     }
 }

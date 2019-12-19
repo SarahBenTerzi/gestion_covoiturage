@@ -132,18 +132,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="recherche_id.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="recherche_id.Designer.cs">
-      <DependentUpon>recherche_id.cs</DependentUpon>
-    </Compile>
-    <Compile Include="resultats_recherche.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="resultats_recherche.Designer.cs">
-      <DependentUpon>resultats_recherche.cs</DependentUpon>
-    </Compile>
     <Compile Include="se connecter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,12 +206,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="recherche_id.resx">
-      <DependentUpon>recherche_id.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="resultats_recherche.resx">
-      <DependentUpon>resultats_recherche.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="se connecter.resx">
       <DependentUpon>se connecter.cs</DependentUpon>
     </EmbeddedResource>

@@ -102,5 +102,89 @@ namespace DAL
             return utils.miseajour(requete);
         }
 
+
+        public static offre get_offre_cin ( int cin)
+        {
+            string requete = String.Format("select * from offre where cin_conducteur ={0};", cin);
+            OleDbDataReader rd = utils.lire(requete);
+            offre u = new offre();
+            while (rd.Read())
+            {
+                u.id_offre = rd.GetInt32(0);
+                u.depart = rd.GetString(1);
+                u.arrivee = rd.GetString(2);
+                u.date_aller = rd.GetDateTime(3);
+                u.date_retour = rd.GetDateTime(4);
+                u.heure_aller = rd.GetDateTime(5);
+                u.heure_retour = rd.GetDateTime(6);
+                u.nbre_places_dispo = rd.GetInt32(7);
+                u.etapes = rd.GetString(8);
+                u.prix_par_passager = rd.GetInt32(9);
+                u.gamme_vehicule = rd.GetString(10);
+                u.prcision_supplementaire = rd.GetString(11);
+                u.cin_conducteur = rd.GetInt32(12);
+
+
+            }
+            utils.Disconnect();
+            return u;
+        }
+
+
+        public static offre get_offre_depart (string ch)
+        {
+            string requete = String.Format("select * from offre where depart ={0};", ch);
+            OleDbDataReader rd = utils.lire(requete);
+            offre u = new offre();
+            while (rd.Read())
+            {
+                u.id_offre = rd.GetInt32(0);
+                u.depart = rd.GetString(1);
+                u.arrivee = rd.GetString(2);
+                u.date_aller = rd.GetDateTime(3);
+                u.date_retour = rd.GetDateTime(4);
+                u.heure_aller = rd.GetDateTime(5);
+                u.heure_retour = rd.GetDateTime(6);
+                u.nbre_places_dispo = rd.GetInt32(7);
+                u.etapes = rd.GetString(8);
+                u.prix_par_passager = rd.GetInt32(9);
+                u.gamme_vehicule = rd.GetString(10);
+                u.prcision_supplementaire = rd.GetString(11);
+                u.cin_conducteur = rd.GetInt32(12);
+
+
+            }
+            utils.Disconnect();
+            return u;
+        }
+
+
+        public static offre get_offre_arrivee (string ch)
+        {
+            string requete = String.Format("select * from offre where arrivee ={0};", ch);
+            OleDbDataReader rd = utils.lire(requete);
+            offre u = new offre();
+            while (rd.Read())
+            {
+                u.id_offre = rd.GetInt32(0);
+                u.depart = rd.GetString(1);
+                u.arrivee = rd.GetString(2);
+                u.date_aller = rd.GetDateTime(3);
+                u.date_retour = rd.GetDateTime(4);
+                u.heure_aller = rd.GetDateTime(5);
+                u.heure_retour = rd.GetDateTime(6);
+                u.nbre_places_dispo = rd.GetInt32(7);
+                u.etapes = rd.GetString(8);
+                u.prix_par_passager = rd.GetInt32(9);
+                u.gamme_vehicule = rd.GetString(10);
+                u.prcision_supplementaire = rd.GetString(11);
+                u.cin_conducteur = rd.GetInt32(12);
+
+
+            }
+            utils.Disconnect();
+            return u;
+        }
+
     }
 }

@@ -30,14 +30,16 @@ namespace ApplicationWinforms
 
         private void authentification_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'utilisateurs_offres_reservationsDataSet.utilisateur' table. You can move, or remove it, as needed.
+            this.utilisateurTableAdapter.Fill(this.utilisateurs_offres_reservationsDataSet.utilisateur);
             // TODO: This line of code loads data into the 'db_clientsDataSet.reservation' table. You can move, or remove it, as needed.
-            this.reservationTableAdapter.Fill(this.db_clientsDataSet.reservation);
+            //this.reservationTableAdapter.Fill(this.db_clientsDataSet.reservation);
             // TODO: This line of code loads data into the 'db_clientsDataSet.offre' table. You can move, or remove it, as needed.
-            this.offreTableAdapter.Fill(this.db_clientsDataSet.offre);
+            //this.offreTableAdapter.Fill(this.db_clientsDataSet.offre);
             // TODO: This line of code loads data into the 'db_clientsDataSet.utilisateur' table. You can move, or remove it, as needed.
-            this.utilisateurTableAdapter.Fill(this.db_clientsDataSet.utilisateur);
+            //this.utilisateurTableAdapter.Fill(this.db_clientsDataSet.utilisateur);
             // TODO: This line of code loads data into the 'db_clientsDataSet.utilisateur' table. You can move, or remove it, as needed.
-            this.utilisateurTableAdapter.Fill(this.db_clientsDataSet.utilisateur);
+            //this.utilisateurTableAdapter.Fill(this.db_clientsDataSet.utilisateur);
 
         }
 
